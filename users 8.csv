@@ -1,0 +1,6 @@
+user_id,name,email,phone,address,created_at
+1,"Alice Johnson",alice@email.com,555-1001,"New York, NY","2026-04-19 21:31:56"
+2,"Bob Smith",bob@email.com,555-1002,"Los Angeles, CA","2026-04-19 21:31:56"
+3,"Carol White",carol@email.com,555-1003,"Chicago, IL","2026-04-19 21:31:56"
+4,"David Brown",david@email.com,555-1004,"Houston, TX","2026-04-19 21:31:56"
+5,"Emma Davis",emma@email.com,555-1005,"Phoenix, AZ","2026-04-19 21:31:56"
