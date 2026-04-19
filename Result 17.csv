@@ -1,0 +1,29 @@
+Trigger,Event,Table,Statement,Timing,Created,sql_mode,Definer,character_set_client,collation_connection,"Database Collation"
+trg_decrease_stock,INSERT,order_items,"BEGIN
+    DECLARE current_stock INT;
+
+    -- Get the current stock level for the product
+    SELECT stock INTO current_stock
+    FROM products 
+    WHERE product_id = NEW.product_id;
+
+    -- Raise an error if there is not enough stock
+    IF current_stock < NEW.quantity THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Error: Insufficient stock for this product!';
+    END IF;
+
+    -- Deduct the ordered quantity from stock
+    UPDATE products
+    SET stock = stock - NEW.quantity
+    WHERE product_id = NEW.product_id;
+
+END",AFTER,"2026-04-19 23:31:20.48","ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION",root@localhost,utf8mb4,utf8mb4_0900_ai_ci,utf8mb4_0900_ai_ci
+trg_restore_stock,DELETE,order_items,"BEGIN
+
+    -- Add the quantity back to stock when an order is cancelled
+    UPDATE products
+    SET stock = stock + OLD.quantity
+    WHERE product_id = OLD.product_id;
+
+END",AFTER,"2026-04-19 23:31:20.54","ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION",root@localhost,utf8mb4,utf8mb4_0900_ai_ci,utf8mb4_0900_ai_ci
