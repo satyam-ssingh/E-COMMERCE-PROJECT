@@ -1,0 +1,7 @@
+product_id,name,price,stock,category
+4,"Wireless Earbuds",32.00,200,Accessories
+6,"Smart Watch Pro",120.00,75,Accessories
+5,"Cotton T-Shirt",15.00,500,Clothing
+2,"Nike Air Max 270",85.00,100,Footwear
+3,"HP Laptop 15",950.00,30,Laptop
+1,"Samsung Galaxy A54",650.00,50,Mobile
