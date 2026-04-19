@@ -1,0 +1,7 @@
+TABLE_NAME,COLUMN_NAME,CONSTRAINT_NAME,REFERENCED_TABLE_NAME,REFERENCED_COLUMN_NAME
+order_items,order_id,fk_items_order,orders,order_id
+order_items,product_id,fk_items_product,products,product_id
+order_items,order_id,order_items_ibfk_1,orders,order_id
+order_items,product_id,order_items_ibfk_2,products,product_id
+orders,user_id,fk_orders_user,users,user_id
+orders,user_id,orders_ibfk_1,users,user_id
