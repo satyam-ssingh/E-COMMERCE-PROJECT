@@ -1,0 +1,6 @@
+order_id,customer,total_items,total_bill,status
+3,"Carol White",1,950.00,Pending
+1,"Alice Johnson",2,735.00,Delivered
+2,"Bob Smith",3,199.00,Processing
+4,"David Brown",2,152.00,Shipped
+5,"Alice Johnson",1,85.00,Delivered
