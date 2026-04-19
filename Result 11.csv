@@ -1,0 +1,10 @@
+order_id,customer_name,product_name,quantity,unit_price,line_total
+1,"Alice Johnson","Samsung Galaxy A54",1,650.00,650.00
+1,"Alice Johnson","Nike Air Max 270",1,85.00,85.00
+2,"Bob Smith","Wireless Earbuds",2,32.00,64.00
+2,"Bob Smith","Cotton T-Shirt",1,15.00,15.00
+2,"Bob Smith","Smart Watch Pro",1,120.00,120.00
+3,"Carol White","HP Laptop 15",1,950.00,950.00
+4,"David Brown","Wireless Earbuds",1,32.00,32.00
+4,"David Brown","Smart Watch Pro",1,120.00,120.00
+5,"Alice Johnson","Nike Air Max 270",1,85.00,85.00
